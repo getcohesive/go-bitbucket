@@ -1,13 +1,13 @@
 package tests
 
 import (
-	"os"
 	"fmt"
+	"os"
 	"testing"
 	"time"
 
+	"github.com/getcohesive/go-bitbucket"
 	_ "github.com/k0kubun/pp"
-	"github.com/ktrysmt/go-bitbucket"
 )
 
 func TestEndToEndDeploymentVariables(t *testing.T) {

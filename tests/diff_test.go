@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/getcohesive/go-bitbucket"
 	"github.com/k0kubun/pp"
-	"github.com/ktrysmt/go-bitbucket"
 )
 
 func TestDiff(t *testing.T) {

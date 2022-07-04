@@ -17,6 +17,7 @@ type Workspace struct {
 	Slug       string
 	Is_Private bool
 	Name       string
+	Links      map[string]interface{}
 	workspace
 }
 

@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ktrysmt/go-bitbucket"
+	"github.com/getcohesive/go-bitbucket"
 )
 
 func TestWebhook(t *testing.T) {
