@@ -33,6 +33,7 @@ type Repository struct {
 	Owner       map[string]interface{}
 	Links       map[string]interface{}
 	Parent      *Repository
+	Workspace   *Workspace
 }
 
 type RepositoryFile struct {
