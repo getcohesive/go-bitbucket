@@ -41,6 +41,7 @@ type Client struct {
 	Teams        teams
 	Repositories *Repositories
 	Workspaces   *Workspace
+	Webhooks     *webhooks
 	Pagelen      int
 	MaxDepth     int
 	// LimitPages limits the number of pages for a request

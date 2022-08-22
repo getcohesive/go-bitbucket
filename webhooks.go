@@ -106,3 +106,17 @@ func (r *Webhooks) Delete(ro *WebhooksOptions) (interface{}, error) {
 	urlStr := r.c.requestUrl("/repositories/%s/%s/hooks/%s", ro.Owner, ro.RepoSlug, ro.Uuid)
 	return r.c.execute("DELETE", urlStr, "")
 }
+
+func (r *Webhooks) CreateWorkspaceWebhook(ro *WebhooksOptions) (*Webhook, error) {
+	data, err := r.buildWebhooksBody(ro)
+	if err != nil {
+		return nil, err
+	}
+	urlStr := r.c.requestUrl("/workspaces/%s/hooks", ro.Owner)
+	response, err := r.c.execute("POST", urlStr, data)
+	if err != nil {
+		return nil, err
+	}
+
+	return decodeWebhook(response)
+}
